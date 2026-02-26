@@ -1,0 +1,14 @@
+C:\Progra-avanzada\Matias_Vargas\Matias_Vargas.LogicaDeNegocio\bin\Debug\Matias_Vargas.LogicaDeNegocio.dll
+C:\Progra-avanzada\Matias_Vargas\Matias_Vargas.LogicaDeNegocio\bin\Debug\Matias_Vargas.LogicaDeNegocio.pdb
+C:\Progra-avanzada\Matias_Vargas\Matias_Vargas.LogicaDeNegocio\bin\Debug\Matias_Vargas.Abstracciones.dll
+C:\Progra-avanzada\Matias_Vargas\Matias_Vargas.LogicaDeNegocio\bin\Debug\Matias_Vargas.AccesoADatos.dll
+C:\Progra-avanzada\Matias_Vargas\Matias_Vargas.LogicaDeNegocio\bin\Debug\EntityFramework.dll
+C:\Progra-avanzada\Matias_Vargas\Matias_Vargas.LogicaDeNegocio\bin\Debug\Matias_Vargas.Abstracciones.pdb
+C:\Progra-avanzada\Matias_Vargas\Matias_Vargas.LogicaDeNegocio\bin\Debug\Matias_Vargas.AccesoADatos.pdb
+C:\Progra-avanzada\Matias_Vargas\Matias_Vargas.LogicaDeNegocio\bin\Debug\Matias_Vargas.AccesoADatos.dll.config
+C:\Progra-avanzada\Matias_Vargas\Matias_Vargas.LogicaDeNegocio\bin\Debug\EntityFramework.xml
+C:\Progra-avanzada\Matias_Vargas\Matias_Vargas.LogicaDeNegocio\obj\Debug\Matias_Vargas.LogicaDeNegocio.csproj.AssemblyReference.cache
+C:\Progra-avanzada\Matias_Vargas\Matias_Vargas.LogicaDeNegocio\obj\Debug\Matias_Vargas.LogicaDeNegocio.csproj.CoreCompileInputs.cache
+C:\Progra-avanzada\Matias_Vargas\Matias_Vargas.LogicaDeNegocio\obj\Debug\Matias_V.FF14ACB5.Up2Date
+C:\Progra-avanzada\Matias_Vargas\Matias_Vargas.LogicaDeNegocio\obj\Debug\Matias_Vargas.LogicaDeNegocio.dll
+C:\Progra-avanzada\Matias_Vargas\Matias_Vargas.LogicaDeNegocio\obj\Debug\Matias_Vargas.LogicaDeNegocio.pdb

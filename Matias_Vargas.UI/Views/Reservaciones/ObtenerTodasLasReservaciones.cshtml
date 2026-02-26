@@ -1,0 +1,177 @@
+﻿@model IEnumerable<Matias_Vargas.Abstracciones.Modelos.Reservaciones.ReservacionesconHabitacionDto>
+
+@{
+    ViewBag.Title = "ObtenerTodasLasReservaciones";
+}
+
+<h2>ObtenerTodasLasReservaciones</h2>
+
+@if (TempData["mensaje"] != null)
+{
+    <div class="alert alert-danger">
+        @TempData["mensaje"]
+    </div>
+}
+<section style="overflow-x:scroll">
+    <table class="table" id="laListaDeReservas">
+        <thead>
+            <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.Id)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.NombreDeLaPersona)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Identificacion)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Telefono)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Correo)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.FechaNacimiento)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Direccion)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.MontoTotal)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.FechaInicioReserva)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.FechaFinReserva)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.FechaDeRegistro)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.CodigoDeHabitacion)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.IdHabitacion)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.NombreDeHabitacion)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.CantidadDeHuespedesPermitidos)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.CantidadDeCamas)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.CantidadDeBanos)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Ubicacion)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.EncargadoDeLimpieza)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.TipoDeHabitacion)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.CostoDeLimpieza)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.CostoDeReserva)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Estado)
+                </th>
+                <th></th>
+            </tr>
+        </thead>
+
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Id)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.NombreDeLaPersona)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Identificacion)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Telefono)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Correo)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.FechaNacimiento)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Direccion)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.MontoTotal)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.FechaInicioReserva)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.FechaFinReserva)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.FechaDeRegistro)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.CodigoDeHabitacion)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.IdHabitacion)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.NombreDeHabitacion)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.CantidadDeHuespedesPermitidos)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.CantidadDeCamas)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.CantidadDeBanos)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Ubicacion)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.EncargadoDeLimpieza)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.TipoDeHabitacion)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.CostoDeLimpieza)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.CostoDeReserva)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Estado)
+                    </td>
+                    <td>
+                        @Html.ActionLink("Edit", "Edit", new { id = item.Id }) |
+                        @Html.ActionLink("Details", "Details", new { id = item.Id }) |
+                        @Html.ActionLink("Delete", "Delete", new { id = item.Id })
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</section>
+@section Scripts {
+    <script src="~/Scripts/Reservaciones/Reservaciones.js"></script>
+}

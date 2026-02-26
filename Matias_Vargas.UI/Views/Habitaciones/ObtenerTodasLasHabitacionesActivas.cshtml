@@ -1,0 +1,105 @@
+﻿@model IEnumerable<Matias_Vargas.Abstracciones.Modelos.Habitaciones.HabitacionesDto>
+
+@{
+    ViewBag.Title = "ObtenerTodasLasHabitacionesActivas";
+}
+
+<h2>ObtenerTodasLasHabitacionesActivas</h2>
+
+@using (Html.BeginForm("ObtenerReservacionPorId", "Reservaciones", FormMethod.Get))
+{
+    <div class="form-inline">
+        <label class="mr-2">Buscar Reserva por id:</label>
+        <input type="number" name="id" class="form-control mr-2" required />
+        <button type="submit" class="btn btn-primary">Buscar</button>
+    </div>
+}
+
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.CodigoDeHabitacion)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.NombreDeHabitacion)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CantidadDeHuespedesPermitidos)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CantidadDeCamas)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CantidadDeBanos)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Ubicacion)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TipoDeHabitacion)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CostoDeReserva)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Estado)
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.CodigoDeHabitacion)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.NombreDeHabitacion)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CantidadDeHuespedesPermitidos)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CantidadDeCamas)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CantidadDeBanos)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Ubicacion)
+            </td>
+            <td>
+                @if (item.TipoDeHabitacion == 1)
+                {
+                    <label>Junior</label>
+                }
+                @if (item.TipoDeHabitacion == 2)
+                {
+                    <label>Superior</label>
+                }
+                @if (item.TipoDeHabitacion == 3)
+                {
+                    <label>Suite</label>
+                }
+
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CostoDeReserva)
+            </td>
+            <td>
+                @if (item.Estado)
+                {
+                    <label>Activo</label>
+                }
+                else
+                {
+                    <label>Inactivo</label>
+                }
+            </td>
+            <td>
+                @Html.ActionLink("Reservar", "../Reservaciones/AgregarReservacion", new { idHabitacion = item.Id })
+            </td>
+        </tr>
+    }
+
+</table>

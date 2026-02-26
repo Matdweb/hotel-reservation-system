@@ -1,0 +1,125 @@
+﻿@model IEnumerable<Matias_Vargas.Abstracciones.Modelos.Habitaciones.HabitacionesDto>
+
+@{
+    ViewBag.Title = "ObtenerTodasLasHabitaciones";
+}
+
+<h2>ObtenerTodasLasHabitaciones</h2>
+
+<p>
+    @Html.ActionLink("Create New", "AgregarHabitacion")
+</p>
+<table class="table" id="laTablaDeHabitaciones">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Id)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CodigoDeHabitacion)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.NombreDeHabitacion)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CantidadDeHuespedesPermitidos)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CantidadDeCamas)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CantidadDeBanos)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Ubicacion)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.EncargadoDeLimpieza)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.TipoDeHabitacion)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CostoDeLimpieza)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CostoDeReserva)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Estado)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Id)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CodigoDeHabitacion)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.NombreDeHabitacion)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CantidadDeHuespedesPermitidos)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CantidadDeCamas)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CantidadDeBanos)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Ubicacion)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.EncargadoDeLimpieza)
+            </td>
+            <td>
+                @if (item.TipoDeHabitacion == 1)
+                {
+                    <label>Junior</label>
+                }
+                @if (item.TipoDeHabitacion == 2)
+                {
+                    <label>Superior</label>
+                }
+                @if (item.TipoDeHabitacion == 3)
+                {
+                    <label>Suite</label>
+                }
+                
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CostoDeLimpieza)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CostoDeReserva)
+            </td>
+            <td>
+                @if (item.Estado)
+                {
+                    <label>Activo</label>
+                }
+                else
+                {
+                    <label>Inactivo</label>
+                }
+            </td>
+            <td>
+                @Html.ActionLink("Editar", "EditarHabitacion", new { id = item.Id }) |
+                @Html.ActionLink("Ver Reservas", "../Reservaciones/ObtenerReservacionesPorIdHabitacion", new { idHabitacion = item.Id })
+            </td>
+        </tr>
+    }
+    </tbody>
+
+</table>
+
+@section Scripts {
+    <script src="~/Scripts/Habitaciones/Habitaciones.js"></script>
+    }
